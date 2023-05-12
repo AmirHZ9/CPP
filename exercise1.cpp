@@ -14,10 +14,10 @@ int main() {
     switch (option) {
         case 1: {
             int n;
-            cout << "Enter the number of positive integers: ";
-            cin >> n;
-
-            int highest = 0, highest_count = 0;
+                   cout << "Enter the number of numbers: ";
+                     cin >> n;
+                 cout << "Enter " << n << " positive numbers: ";
+                  int highest = 0, highest_count = 0;
             for (int i = 0; i < n; i++) {
                 int num;
                 cin >> num;
@@ -26,7 +26,7 @@ int main() {
                     highest = num;
                     highest_count = 1;
                 }
-                if (num == highest) {
+                else if (num == highest) {
                     highest_count++;
                 }
             }
@@ -56,9 +56,9 @@ int main() {
             cout << "Enter the number of even integers: ";
             cin >> n;
 
+                cout << "Enter "<< n <<" even integer: ";
             for (int i = 0; i < n; i++) {
                 int num;
-                cout << "Enter an even integer: ";
                 cin >> num;
 
                 if (num % 2 != 0) {
@@ -67,8 +67,8 @@ int main() {
                     continue;
                 }
 
-                unsigned long long factorial = 1;
-                for (int j = 2; j <= num; j += 2) {
+               int factorial = 1;
+                for (int j = 1; j <= num; j ++) {
                     factorial *= j;
                 }
                 cout << "The factorial of " << num << " is " << factorial << ".\n";
